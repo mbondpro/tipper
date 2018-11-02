@@ -1,0 +1,5 @@
+%tr
+  %td= company.name
+  %td= company.main_check
+  %td= link_to 'Edit', edit_company_path(company)
+  %td= link_to 'Delete', company, method: :delete, data: { confirm: 'Are you sure?' }

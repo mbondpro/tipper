@@ -1,0 +1,16 @@
+%h1 Your Companies
+
+%p= link_to 'Add a Company', new_company_path
+
+%p 
+  This is the list of companies you have worked for.
+  If you'd like to change your default company, click its "edit" link.
+  If you have rendered any services for a company, you can no longer delete the company.
+
+- if @companies.any?
+  %table
+    %th Name
+    %th Default?
+    = render @companies
+- else
+  %p There are no companies listed.

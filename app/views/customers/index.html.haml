@@ -1,0 +1,14 @@
+%h1 Customer List
+
+%p These are your customers. You can only add a customer when you register a treatment.
+
+- if @customers.any?  
+  %p= will_paginate @customers
+  %table
+    %th Name
+    %th Phone
+    %th E-mail
+    = render @customers
+  %p= will_paginate @customers
+- else
+  %p There are no customers listed.

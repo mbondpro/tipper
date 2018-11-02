@@ -1,0 +1,20 @@
+%tr
+  %td= 'Totals'
+  %td.right= number_to_currency(@rpt.total_costs)
+  %td.right= number_to_currency(@rpt.total_commissions)
+  %td.right= number_to_currency(@rpt.total_tips)
+  %td.right= number_to_currency(@rpt.total_earned)  
+
+%tr
+  %td= 'Weekly Averages'
+  %td.right= number_to_currency(@rpt.weekly_average_costs)
+  %td.right= number_to_currency(@rpt.weekly_average_commissions)
+  %td.right= number_to_currency(@rpt.weekly_average_tips)
+  %td.right= number_to_currency(@rpt.weekly_average_earned)  
+
+%tr
+  %td= 'Averages per Pay Period'
+  %td.right= number_to_currency(@rpt.average_costs)
+  %td.right= number_to_currency(@rpt.average_commissions)
+  %td.right= number_to_currency(@rpt.average_tips)
+  %td.right= number_to_currency(@rpt.average_earned)  

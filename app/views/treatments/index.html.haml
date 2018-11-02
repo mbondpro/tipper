@@ -1,0 +1,22 @@
+%h1 Treatments List
+
+%p= "This is the list of treatments you have completed"
+
+%p= link_to 'Add a Treatment', new_treatment_path
+
+- if @treatments.any?
+  %p= will_paginate @treatments
+  %table
+    %th Date
+    %th Customer
+    %th Services
+    %th Cost
+    %th Commission
+    %th Tip
+    %th Total
+    %th Comment
+    = render @treatments
+  %p= will_paginate @treatments
+
+- else
+  %p There are no treatments listed.

@@ -1,0 +1,40 @@
+%h2 Sign up
+
+= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+  = devise_error_messages! 
+
+  = f.label :username
+  = f.text_field :username, autofocus: true
+
+  = f.label :name
+  = f.text_field :name
+
+  = f.label :email 
+  = f.email_field :email 
+
+  %p
+    = f.label 'Commission Rate'
+    <i>from 0 to 1, like 0.25 for 25% </i>
+    = f.text_field :commission_rate
+
+  %p
+    = f.label 'Weekly Goal'
+    <i>Commission increases if you exceed this number</i>
+    = f.text_field :goal
+
+  %p
+    = f.label 'Alternate Commission Rate'
+    <i>The commission rate if you meet your weekly goal</i>
+    = f.text_field :high_commission
+
+  = f.label :password 
+  = f.password_field :password 
+
+  = f.label :password_confirmation 
+  = f.password_field :password_confirmation 
+
+  %p= f.submit "Sign up" 
+
+%br
+
+= render "devise/shared/links" 

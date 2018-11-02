@@ -1,0 +1,7 @@
+%tr
+  %td= link_to customer.name, customer
+  %td= customer.phone
+  %td= customer.email
+  %td= link_to 'Edit', edit_customer_path(customer)
+  - if customer.treatments.empty?
+    %td= link_to 'Delete', customer, method: :delete, data: { confirm: 'Are you sure?' }

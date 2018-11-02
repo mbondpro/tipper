@@ -1,0 +1,11 @@
+%h1 Customer Search
+
+- if @customers.any?  
+  %p Your search resulted in the following customers:
+  %table
+    %th Name
+    %th Phone
+    %th E-mail
+    = render @customers
+- else
+  %p Your search returned no customers.

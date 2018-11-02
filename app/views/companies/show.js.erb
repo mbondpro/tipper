@@ -1,0 +1,4 @@
+var ts = "<%=j collection_select :treatment, :service_id, @company.services, :id, :name, prompt: true %>"
+$('#treatment_service_id').html(ts);
+$('#treatment_cost').val("");
+

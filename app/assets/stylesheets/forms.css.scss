@@ -1,0 +1,40 @@
+form {
+  width: 50%;
+}
+
+label {
+  display: block;
+}
+
+.check label {
+  display: inline;
+}
+
+ul.services {
+  display: inline;
+  
+  select {
+    width: 150px;
+  }
+
+  li.right {
+    float: right;
+    width: 150px;
+  }
+
+  .check {
+    display: inline;
+    font-size: 80%
+  }
+}
+
+fieldset {
+  width: 95%;
+}
+
+button.add {
+  color: green;
+  font-weight: bold;
+  background-color: #FFEBCD;
+  border: 2px solid black;
+}

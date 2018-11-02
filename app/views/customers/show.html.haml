@@ -1,0 +1,35 @@
+%h1 Customer Detail
+%h3
+  = "#{@customer}'s Treatments"
+
+
+- if @treatments.any?
+  %p= will_paginate @treatments
+  %table
+    %th Date
+    %th Customer
+    %th Services
+    %th Cost
+    %th Commission
+    %th Tip
+    %th Total
+    %th Comment
+    = render @treatments
+  %p= will_paginate @treatments
+
+- else
+  %p There are no treatments listed.
+
+%h3 Customer Details
+%p
+  = link_to 'Edit Customer', edit_customer_path(@customer)
+  = link_to 'Delete Customer', @customer, method: :delete, data: { confirm: 'Are you sure?' }
+
+%p
+  Phone:
+  = @customer.phone
+
+%p
+  E-mail:
+  = @customer.email
+

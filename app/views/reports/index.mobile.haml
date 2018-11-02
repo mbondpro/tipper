@@ -1,0 +1,55 @@
+%h1 Reports
+
+%h3 Summary
+
+%table
+  %th 
+  %th Cost Servcs.
+  %th Com. Earned
+  %th Tips
+  %th Tot. Earned
+  = render 'summary.html.haml'
+
+%p= button_tag(:type => 'button', :id => 'toggle_plots') { 'Show Graphs' }
+
+%div#plots.hidden
+  %h2 Summary Graphs
+  %p= plot("#{@current_user.id.to_s}_weekly_costs.png")
+  %p= plot("#{@current_user.id.to_s}_weekly_coms.png")
+  %p= plot("#{@current_user.id.to_s}_weekly_tips.png")
+  %p= plot("#{@current_user.id.to_s}_weekly_tots.png")
+
+%h3 Daily Results for Current Pay Period Ending #{@rpt.last_date.strftime("%d %B")}
+
+%table
+  %th Date
+  %th Cost Servcs.
+  %th Com. Earned
+  %th Tips
+  %th Tot. Earned
+  = render 'by_date.html.haml'
+
+%h3 Results by Week
+
+%table
+  %th Period #
+  %th From
+  %th To
+  %th Cost Servcs.
+  %th Com. Earned
+  %th Tips
+  %th Tot. Earned
+  = render 'by_week.html.haml'
+
+%h3 Results by Pay Period
+
+%table
+  %th Period #
+  %th From
+  %th To
+  %th Cost Servcs.
+  %th Com. Earned
+  %th Tips
+  %th Tot. Earned
+  = render 'by_period.html.haml'
+

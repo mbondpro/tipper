@@ -1,0 +1,29 @@
+%h1 Customer Detail
+%h3= @customer
+
+%p
+  = link_to 'Edit', edit_customer_path(@customer)
+  = link_to 'Delete', @customer, method: :delete, data: { confirm: 'Are you sure?' }
+
+%p
+  Phone:
+  = @customer.phone
+
+%p
+  E-mail:
+  = @customer.email
+
+- if @treatments.any?
+  %p= will_paginate @treatments
+  %table
+    %th
+    %th Date
+    %th Customer
+    %th Services
+    %th Cost
+    %th Tip
+    = render @treatments
+  %p= will_paginate @treatments
+
+- else
+  %p There are no treatments listed.

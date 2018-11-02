@@ -1,0 +1,14 @@
+one:
+  name: MyString1
+  price: 15.50
+  company_id: 1
+
+two:
+  name: MyString2
+  price: 55
+  company_id: 2
+
+three:
+  name: MyString3
+  price: 65.15
+  company_id: 1

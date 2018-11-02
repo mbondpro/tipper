@@ -1,0 +1,13 @@
+%h1 Services List
+
+%p= link_to 'Add a Service', new_service_path
+
+- if @services.any?
+  If you have logged any services, you can no longer delete that service.
+  %table
+    %th Company
+    %th Service Name
+    %th Price
+    = render @services
+- else
+  %p There are no services listed.

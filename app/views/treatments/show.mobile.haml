@@ -1,0 +1,40 @@
+%h2 Treatment Details 
+
+%p
+  Date:
+  = @treatment.date.strftime("%b %d, %Y")
+
+%p
+  Customer:
+  = @treatment.customer
+
+%p
+  Services:
+  = @treatment.services.join(', ') 
+
+%p
+  Cost:
+  = number_to_currency(@treatment.cost)
+
+%p
+  Commission:
+  = number_to_currency(@treatment.commission_earned)
+
+%p
+  Tip:
+  = number_to_currency(@treatment.tip)
+
+%p
+  Total Earned:
+  = number_to_currency(@treatment.cost * @treatment.commission + @treatment.tip)
+
+%p
+  Comment:
+  = @treatment.comment
+
+
+= link_to 'Edit', edit_treatment_path(@treatment)
+|
+= link_to 'All Treatments', treatments_path
+|
+= link_to 'New Treatment', new_treatment_path

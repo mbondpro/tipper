@@ -1,0 +1,141 @@
+@import "defs.css.scss";
+
+* {
+    padding: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+    display: block;
+}
+
+body {
+  background-color: #FFFFFF;
+  color: #333333;
+  font-family: $fonts;
+	width: 960px;
+}
+
+#container {
+	margin: 0 auto;
+	text-align: left;
+}
+
+#maincontent {
+	float: left;
+	width: 720px;
+}
+
+section, nav {
+  padding: 0;
+  margin: 0;
+}
+
+.content {
+	padding: 10px;
+	text-align: left;
+}
+
+.center_block {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.clear {
+	clear: both;
+}
+
+.center {
+	margin: 0 auto;
+}
+
+.hidden {
+	display: none;
+}
+
+.highlight {
+	background-color: #FFFF66;
+}
+
+
+h1, h2 {
+	padding: 2px 0 2px 0;
+  margin: 0px;
+	background-color: #8B4513;
+	color: GhostWhite;
+	text-align: center;
+	font-weight: bold;
+  @include rounded;  
+  
+  a {
+    text-decoration: none;
+  }
+}
+
+h1 {
+	font-size: 150%;
+}
+	
+h2 {
+	font-size: 120%;
+}
+
+h3 {
+	color: #000000;
+}
+
+a {
+	color: #000000;
+
+  &:hover {
+  	text-decoration: none;
+  }
+}
+
+li {
+	list-style-type: none;
+  minimum-width: 200px;
+
+  .bordered {
+    border: 1px solid gray;
+  }
+}
+
+img {
+	border: none;
+
+  .left {
+	  float: left;
+	  margin: 0 15px 0 0;
+  }
+
+  .right {
+	  float: right;
+	  margin: 0 0 0 15px;
+  }
+}
+
+select {
+	minimum-width: 160px;	
+
+  .wide {
+	  width: 260px;
+  }
+}
+
+.pagination { padding: 3px; margin: 3px; }
+.pagination a { padding: 2px 5px 2px 5px; margin: 2px; border: 1px solid $color; text-decoration: none; color: $color; }
+.pagination a:hover,
+.pagination a:active { border: 1px solid $highlight; color: $highlight; background-color: $bg}
+.pagination span.current { padding: 2px 5px 2px 5px; margin: 2px; border: 1px solid #000099; font-weight: bold; background-color: #000099; color: #FFF; }
+.pagination span.disabled { padding: 2px 5px 2px 5px; margin: 2px; border: 1px solid #eee; color: #ddd; }
+

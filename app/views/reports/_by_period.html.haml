@@ -1,0 +1,9 @@
+- @rpt.treatments_by_period.each do |t|
+  %tr
+    %td= t[0][0]
+    %td= t[0][1].strftime("%d-%b-%y")
+    %td= t[0][2].strftime("%d-%b-%y")
+    %td.right= number_to_currency(t[1])
+    %td.right= number_to_currency(t[2])
+    %td.right= number_to_currency(t[3])
+    %td.right= number_to_currency(t[4])

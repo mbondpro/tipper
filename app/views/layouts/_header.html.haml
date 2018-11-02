@@ -1,0 +1,22 @@
+.logo
+  %h1= link_to 'Tips & Commissions', root_path
+
+%nav#menu
+  %ul
+    - if signed_in?
+      %li= link_to 'Sign Out', destroy_user_session_path, :method => :delete
+    - else
+      %li= link_to 'Sign In', new_user_session_path
+      %li= link_to 'Sign Up', new_user_registration_path
+    %li= link_to 'Reports', reports_path
+    %li= link_to 'Treatments', treatments_path
+    %li= link_to 'New Treatment', new_treatment_path
+
+%br
+%br
+%br
+
+.ui-widget
+  = form_tag '/customers/show', {:method => :get, :id => 'search'} do
+    = search_field_tag 'cust_name'
+    = submit_tag 'Find Customer'

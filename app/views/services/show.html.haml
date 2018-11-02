@@ -1,0 +1,18 @@
+%p
+  Company:
+  = @service.company
+
+%p
+  Service Name:
+  = @service.name
+
+%p
+  Price:
+  = number_to_currency(@service.price)
+
+
+= link_to 'Edit', edit_service_path(@service)
+|
+= link_to 'Services List', services_path
+|
+= link_to 'Add a New Service', new_service_path

@@ -1,0 +1,26 @@
+one:
+  id: 1
+  cost: 15
+  commission: .43
+  date: 2012-11-05
+  customer_id: 1
+  user_id: 1
+  tip: 5
+
+two:
+  id: 2
+  cost: 55
+  commission: .5
+  date: 2012-11-05
+  customer_id: 1
+  user_id: 1
+  tip: 15
+
+no_acts:
+  id: 3
+  cost: 55
+  commission: .43
+  date: 2012-11-05
+  customer_id: 1
+  user_id: 1
+  tip: 25

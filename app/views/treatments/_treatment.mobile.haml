@@ -1,0 +1,10 @@
+%tr
+  %td= link_to 'Show', treatment_path(treatment)
+  %td= treatment.date.strftime("%b %d")
+  %td= link_to treatment.customer, treatment.customer
+  %td= treatment.services.join(', ')
+  %td.right= number_to_currency(treatment.cost)
+  %td.right= number_to_currency(treatment.tip)
+ 
+  %td= link_to 'Edit', edit_treatment_path(treatment) 
+  %td= link_to 'Delete', treatment, method: :delete, data: { confirm: 'Are you sure?' } 

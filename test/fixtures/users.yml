@@ -1,0 +1,11 @@
+one:
+  name: MyString1
+  username: MyString1
+  email: MyString1
+  commission_rate: .43
+
+two:
+  name: MyString2
+  username: MyString2
+  email: MyString2
+  commission_rate: .5

@@ -1,0 +1,14 @@
+= form_for(@service) do |f|
+  = f.error_messages
+
+  = f.label :company
+  = collection_select :service, :company_id, current_user.companies, :id, :name
+
+  = f.label "Service Name"
+  = f.text_field :name, autofocus: true
+
+  = f.label :price
+  = f.text_field :price
+
+  %p= f.submit
+

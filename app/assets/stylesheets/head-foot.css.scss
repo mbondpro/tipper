@@ -1,0 +1,42 @@
+@import "defs.css.scss";
+
+$bg: #FFEBCD;  // blanched almond (light)
+$color: #8B4513; // chocolate4
+$link_color: #FFF8DC;  //cornsilk
+
+header {
+  height: 100px;
+	min-width: 800px;
+	background-color: $bg;
+  color: $color;
+  @include rounded;
+
+  .logo {
+    width: 380px;
+    float: left;
+
+    h1 {
+	    margin: 5px 0 0 15px;
+	    padding: 5px;
+	    font: normal 180%;
+	    text-align: center;
+
+      a {
+        color: $bg;
+      }
+    }
+  }
+}
+
+footer {
+	clear: both;
+	margin: 40px 0 0 0;
+	text-align: center;
+	background-color: $bg;
+  color: $color;
+  @include rounded;
+
+  a {
+    color: $link_color;
+  }
+}

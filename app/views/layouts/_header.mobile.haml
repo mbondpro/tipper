@@ -1,0 +1,13 @@
+.logo
+  %h1= link_to 'Tips & Commissions', root_path
+
+%nav#menu
+  %ul
+    - if signed_in?
+      %li.fl_right= link_to 'Sign Out', destroy_user_session_path, :method => :delete
+    - else
+      %li= link_to 'Sign In', new_user_session_path
+      %li= link_to 'Sign Up', new_user_registration_path
+    %li= link_to 'Reports', reports_path
+    %li= link_to 'Treatments List', treatments_path
+    %li= link_to 'New Treatment', new_treatment_path

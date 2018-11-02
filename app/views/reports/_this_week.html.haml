@@ -1,0 +1,14 @@
+%tr.highlight
+  %td Total
+  %td.right= number_to_currency(@rpt.this_period[1])
+  %td.right= number_to_currency(@rpt.this_period[2])
+  %td.right= number_to_currency(@rpt.this_period[3])
+  %td.right= number_to_currency(@rpt.this_period[4])
+
+- @rpt.treatments_by_week.each do |t|
+  %tr
+    %td= t[0].strftime("%d-%b")
+    %td.right= number_to_currency(t[1])
+    %td.right= number_to_currency(t[2])
+    %td.right= number_to_currency(t[3])
+    %td.right= number_to_currency(t[4])

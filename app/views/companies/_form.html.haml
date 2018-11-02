@@ -1,0 +1,11 @@
+= form_for @company do |f|
+  = f.error_messages
+
+  = f.label :name
+  = f.text_field :name, autofocus: true
+
+  %div.check    
+    = f.check_box :main
+    = f.label 'Make Default'
+
+  %p= f.submit 'Save'

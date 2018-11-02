@@ -1,0 +1,7 @@
+%li
+  = service.select :service_id, 
+    current_user.main_services.collect {|s| [ s.name, s.id ] }, prompt: true
+  = service.text_field :cost, size: 5
+  - unless service.object.new_record?
+    = service.check_box('_destroy')
+    = service.label '_destroy', 'Remove', class: 'check'

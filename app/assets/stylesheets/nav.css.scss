@@ -1,0 +1,38 @@
+@import "defs.css.scss";
+
+$color: #FFEBCD;  // blanched almond (light)
+$bg_color: #8B4513; // chocolate4
+
+nav#menu {
+  font: 120% Tahoma, "Times New Roman", Times, serif;
+	background-color: $bg_color;
+  min-width: 200px;
+  float: right;
+	text-align: right;
+  @include rounded;
+
+  ul {
+    margin: 0;
+    list-style: none;
+    @include rounded;
+  }
+
+  li {
+	  display: inline;
+  }
+
+  p {
+	  background: none;
+  }
+
+  a {
+	  padding: 10px;
+	  text-decoration: none;
+	  font: Tahoma, Arial, Helvetica, sans-serif;
+	  color: $color;
+
+    &:hover {
+	    text-decoration: underline;
+    }
+  }
+}

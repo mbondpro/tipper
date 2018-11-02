@@ -1,0 +1,60 @@
+= form_for(@treatment.with_acts) do |f|
+  = f.error_messages
+
+  - if @met_goals
+    %p.highlight
+      Congratulations, you have exceeded your goal of #{number_to_currency(current_user.goal)} for this week 
+      and will receive the higher commission rate of #{current_user.high_commission * 100}%.
+
+  Company:
+  = current_user.main_co
+
+  = f.label :date 
+  = f.date_select :date 
+
+  = field_set_tag 'Services Provided' do
+    %ul.services#act_list
+      = f.fields_for(:acts) do |f_acts|
+        %li
+          = f_acts.select :service_id, 
+            current_user.main_services.collect {|s| [ s.name, s.id ] }, prompt: true
+          $
+          = f_acts.text_field :cost, size: 5
+          - unless f_acts.object.new_record?
+            = f_acts.check_box('_destroy')
+            = f_acts.label '_destroy', 'Remove', class: 'check'
+    %p= button_tag(:type => 'button', :class => 'add', :id => 'add_service') { '+ Add a Row' }
+
+  = f.label :commission 
+  = f.text_field :commission, size: 4
+
+  = f.label :tip
+  = f.text_field :tip, size: 5
+
+  %hr
+
+  = f.label 'Type Existing Customer Name'
+  .ui-widget
+    = search_field_tag 'cust_name_form'
+
+  = f.label 'Or choose from this list'
+  = collection_select :treatment, :customer_id, current_user.customers, :id, 
+      :name, prompt: true
+
+  = field_set_tag 'Or Add a New Customer' do
+    = fields_for :customer do |c|
+      = c.label 'Name (required)'
+      = c.text_field :name
+      = c.label :phone
+      = c.text_field :phone
+      = c.label :email
+      = c.text_field :email
+
+  %hr
+
+  = f.label :comment
+  = f.text_area :comment, cols: 60, rows: 4
+
+  %p= f.submit 
+
+

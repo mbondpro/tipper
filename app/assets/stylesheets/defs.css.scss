@@ -1,0 +1,14 @@
+$fonts: 'Helvetica', 'Arial', sans-serif;
+$header-font: 'Tahoma', 'Arial', 'Helvetica', sans-serif;
+
+$bg: #FFEBCD;  // blanched almond (light)
+$color: #8B4513; // chocolate4
+$link_color: #FFF8DC;  //cornsilk
+$highlight: #B80000; //reddish
+
+@mixin rounded {
+  -moz-border-radius: 5px; 
+  -webkit-border-radius: 5px; 
+  -khtml-border-radius: 5px; 
+  border-radius: 5px;
+}

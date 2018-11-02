@@ -1,0 +1,8 @@
+%tr
+  %td= service.company
+  %td= service.name 
+  %td.right= number_to_currency(service.price)
+  %td= link_to 'Edit', edit_service_path(service) 
+  - if service.treatments.empty?
+    %td= link_to 'Delete', service, method: :delete, data: { confirm: 'Are you sure?' } 
+
