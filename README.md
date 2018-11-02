@@ -2,7 +2,7 @@
 
 This is a Ruby on Rails 3.2 application that allows the tracking of one's own tips and commissions. This is especially helpful for those in the beauty or skin care industry who would like to compare their annotation of their earnings against those on a pay stub, as errors can occur. Additionally, the user can access reports that show weekly or pay-period-based stats in both table form and in graphs.
 
-See a video walkthrough here: https://mbondpro.blogspot.com/2018/11/tips-and-commissions-tracker-code-and.html
+See a video walkthrough here: http://www.mbondpro.com/2018/11/tips-and-commissions-tracker-code-and.html
 
 To set up, don't forget to perform the following actions:
 
